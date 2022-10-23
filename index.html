@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script type="module">
+        import {Storege} from './src/libs/Storege.js'
+        import {UserRepository} from './src/repository/UserRepository.js'
+        import {AuthorRepository} from './src/repository/AuthorRepository.js'
+        import {User} from './src/entities/User.js'
+        import {Author} from './src/entities/Author.js'
+
+        // const userStorege = new Storege('user')
+        // const ingrediente = new Storege('ingrediente')
+        // ingrediente.save({
+        //     name: "tomate"
+        // })
+        // const findonde = await userStorege.findOne('c365-f762-6e37-f9c7-5ad8-2dda')
+        // console.log(findonde)
+
+        // const findAll = await userStorege.findAll()
+        // console.log(findAll)
+
+        //const test = await ingrediente.findOneAndUpdate('e919-0538-5c13-65ae-6ca1-1426', {name: 'cebolinha'})
+        //console.log(test)
+
+        // await ingrediente.remove('e919-0538-5c13-65ae-6ca1-1426')
+
+        //await userStorege.removeAll()
+            
+        
+        const userRepository = new UserRepository(Storege)
+
+        // const userPedro = await userRepository.save(new User({
+        //     name: "lenin",
+        //     email: "lenin@gmail.com",
+        //     photo: "lenin.png"
+        // }))
+       
+        // console.log(user1)
+
+        // const getAll = await userRepository.getAll()
+        // console.log(getAll)
+
+        //const user = await userRepository.getById('268a-5ac6-a9bd-83ee-d09f-90c2')
+        userRepository.remove('268a-5ac6-a9bd-83ee-d09f-90c2')
+        // console.log(user)
+        // user.photo = 'felipe-boladão2.png'
+        // const update = await userRepository.update(user)
+        // console.log('novo valor ==> ', update)
+
+        // const authorRepository = new AuthorRepository(Storege)
+        // const user1 = await userRepository.getById('4091-6bb9-2467-a419-062e-7130')
+        // console.log(user1)
+        // const author1 = authorRepository.save(new Author({
+        //     receitas: [],
+        //     userId: user1.id
+        // }))
+
+    </script>
+</body>
+</html>
